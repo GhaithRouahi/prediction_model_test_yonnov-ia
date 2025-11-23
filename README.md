@@ -2,11 +2,11 @@
 
 This project implements an end-to-end automated system for predicting real estate prices (both rental and sale) using machine learning models deployed in an Odoo environment. The system includes data scraping, cleaning, prediction automation, and comprehensive evaluation with visualizations.
 
-## 🎯 Project Overview
+##  Project Overview
 
 The system automates the entire workflow from data collection to model evaluation for real estate price predictions in French cities. It handles both **location** (rental) and **vente** (sale) price predictions through a series of interconnected scripts and notebooks.
 
-## 🔧 Process Automation Components
+##  Process Automation Components
 
 ### 1. **Model Endpoint Extraction** 
 *Automated testing process discovery*
@@ -21,7 +21,7 @@ Using browser DevTools, I reverse-engineered the Odoo module interface to extrac
   3. `web_read` - Retrieves the predicted price
 - **Result**: Complete automation of the manual testing process
 
-### 2. **Data Scraping System** 📂 `/Scrape/`
+### 2. **Data Scraping System**  `/Scrape/`
 *Comprehensive web scraping with data quality assurance*
 
 **Files:**
@@ -52,7 +52,7 @@ Using browser DevTools, I reverse-engineered the Odoo module interface to extrac
 - **Outlier Filtering**: Remove corrupted/extreme values that distort analysis
 - **City Normalization**: Standardize city names (lowercase, trim spaces)
 
-### 4. **Automated Prediction Scripts** 📂 `/Predict/`
+### 4. **Automated Prediction Scripts**  `/Predict/`
 *Line-by-line price prediction automation*
 
 **Files:**
@@ -76,7 +76,7 @@ action_get_prediction(record_id)     # Trigger prediction
 prediction = web_read(record_id)     # Retrieve result
 ```
 
-### 5. **Model Evaluation System** 📂 `/location/` & `/vente/`
+### 5. **Model Evaluation System**  `/location/` & `/vente/`
 *Comprehensive prediction accuracy assessment*
 
 **Components:**
@@ -88,7 +88,7 @@ prediction = web_read(record_id)     # Retrieve result
 - `evaluate_vente.py` - Sale prediction evaluation (standalone script)
 - `data_before_pred.csv` & `data_after_pred.csv` - Input/output datasets
 
-### 6. **Interactive Visualization Notebooks** 📊
+### 6. **Interactive Visualization Notebooks**
 *Visual analysis and results presentation*
 
 **Notebooks:**
@@ -107,7 +107,7 @@ prediction = web_read(record_id)     # Retrieve result
 - Outlier detection and filtering for meaningful visualizations
 - City-level filtering (minimum sample sizes for statistical significance)
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 prediction_test/
@@ -143,7 +143,7 @@ prediction_test/
     └── data_after_pred.csv           # Results with predictions
 ```
 
-## 🚀 Usage Instructions
+##  Usage Instructions
 
 ### 1. **Data Scraping**
 ```bash
@@ -177,14 +177,14 @@ jupyter notebook location/evaluate_model.ipynb
 jupyter notebook vente/evaluate_vente.ipynb
 ```
 
-## 📊 Key Results & Insights
+##  Key Results & Insights
 
 - **Automated Testing**: Eliminated manual UI interactions, enabling batch processing of thousands of properties
 - **Data Quality**: Robust scraping and cleaning pipeline ensures reliable model inputs  
 - **Prediction Accuracy**: Comprehensive evaluation across multiple French cities with statistical significance testing
 - **Visual Analysis**: Clear, interpretable charts showing model performance patterns and geographical variations
 
-## 🛠 Technical Stack
+##  Technical Stack
 
 - **Python 3.x** - Core language
 - **pandas, numpy** - Data manipulation and analysis
@@ -193,7 +193,7 @@ jupyter notebook vente/evaluate_vente.ipynb
 - **requests** - API communication with Odoo
 - **Jupyter Notebook** - Interactive analysis environment
 
-## 🎓 Learning Outcomes
+##  Learning Outcomes
 
 This project demonstrates:
 - **API Reverse Engineering**: Extracting endpoints from browser DevTools
